@@ -7,6 +7,7 @@ from flask_cors import CORS
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate  # <--- CAMBIO 1: Importación necesaria
 from sqlalchemy import UniqueConstraint
+import requests
 
 from producer import publish
 
@@ -45,12 +46,13 @@ class ProductUser(db.Model):
 def index():
     return jsonify(Product.query.all())
 
+
 @app.route('/api/products/<int:id>/like', methods=['POST'])
 def like(id):
-    req = request.get(http://docker.for.mac.localhost:8000/api/user)
-    
+    # Usa requests con la URL entre comillas
+    req = requests.get('http://docker.for.mac.localhost:8000/api/user')
     json = req.json()
-    
+
     try:
         
         product_user = ProductUser(user_id=json['id'], product_id=id)
