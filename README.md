@@ -43,3 +43,14 @@ Ambos microservicios y la base de datos están dockerizados. Ejecuta el siguient
 
 ```bash
 docker-compose up --build
+```
+
+### 2. Levantar el Frontend (React)
+Navega a la carpeta del frontend e instala las dependencias:
+
+```cd react-crud
+npm install
+npm start
+```
+
+
