@@ -48,7 +48,8 @@ docker-compose up --build
 ### 2. Levantar el Frontend (React)
 Navega a la carpeta del frontend e instala las dependencias:
 
-```cd react-crud
+```
+cd react-crud
 npm install
 npm start
 ```
